@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <title>Intercept particular page</title>
+    <style>
+      html, body {
+        height: 300px;
+        width: 300px;
+        margin: 0px;
+        font-family: monospace;
+      }
+      .main-container {
+        margin: 5px;
+        height: 100%;
+        border: solid 1px;
+        padding-left: 10px;
+        padding-right: 20px;
+        padding-top: 20px;
+      }
+      .interceptor-text {
+        font-size: 20px;
+      }
+      #pageDomain {
+        margin-top: 30px;
+        margin-bottom: 10px;
+        width: calc( 100% - 30px);
+        height: 35px;
+        border: 0px;
+        font-size: 20px;
+        font-family: monospace;
+        border-bottom: solid 2px #9b9b9b;
+      }
+      #pageDomain:focus {
+        outline: none !important;
+        border: 0px;
+        border-bottom: solid 2px #9b9b9b;
+      }
+      #pageBlocked {
+        font-size: 14px;
+      }
+      #submitButton {
+        width: calc(100% - 30px);
+        border: solid 2px #9b9b9b;
+        background: white;
+        font-family: monospace;
+        height: 35px;
+        font-size: 20px;
+      }
+    </style>
+    <script src="blocked_page_storage.js"></script>
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="interceptor-text">
+        The page you request to intercept can be accessed only twice in a day, afterwhich the page will be blocked.
+      </div>
+      <input type="text" id="pageDomain">
+      <div id="pageBlocked">
+      </div>
+      <br>
+      <button id="submitButton">Submit</button>
+    </div>
+  </body>
+</html>

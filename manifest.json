@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,
+
+  "name": "Interceptor",
+  "description": "Chrome extension that intercepts the page request of specific url's and displays a caution page before the page can be proceeded.",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "page_blocker.html"
+  },
+
+  "permissions": [
+    "<all_urls>",
+    "webRequest",
+    "webRequestBlocking",
+    "storage"
+  ],
+
+  "background": {
+    "scripts": ["background.js"]
+  }
+}
